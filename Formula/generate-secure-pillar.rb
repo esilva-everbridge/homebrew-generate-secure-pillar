@@ -2,14 +2,14 @@
 class GenerateSecurePillar < Formula
   desc "Create and update encrypted content or decrypt encrypted content in YAML files"
   homepage "https://github.com/Everbridge/generate-secure-pillar"
-  version "1.0.520"
+  version "1.0.522"
 
   if OS.mac?
-    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.520/generate-secure-pillar_1.0.520_Darwin_x86_64.tar.gz"
-    sha256 "ea0d9b3c23ce8d19a41c30525c4657e9b306eb7f1c926f5bbe63f89c54893c75"
+    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.522/generate-secure-pillar_1.0.522_Darwin_x86_64.tar.gz"
+    sha256 "859a682387ed8d7dc1ab9fff8f7738060dec4e109147242e0725bb9a296052c1"
   elsif OS.linux?
-    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.520/generate-secure-pillar_1.0.520_Linux_x86_64.tar.gz"
-    sha256 "276d5072643d0ff0e26d7c0a3b8182f532c1a0f54e981569203dbee39bba7a4d"
+    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.522/generate-secure-pillar_1.0.522_Linux_x86_64.tar.gz"
+    sha256 "d9463f4f228343f020dec98ffe0d77756619b10cd4a80e43f2a75d833e87fc18"
   end
   
   depends_on "gpg1"
