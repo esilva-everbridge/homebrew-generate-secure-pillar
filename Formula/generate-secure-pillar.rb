@@ -2,16 +2,16 @@
 class GenerateSecurePillar < Formula
   desc "Create and update encrypted content or decrypt encrypted content in YAML files"
   homepage "https://github.com/Everbridge/generate-secure-pillar"
-  version "1.0.534"
+  version "1.0.538"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.534/generate-secure-pillar_1.0.534_Darwin_x86_64.tar.gz"
-    sha256 "77b0f11b5d7418e18d8f9e69130525cd3e4df6facb3cdd00f2dc6087df22663b"
+    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.538/generate-secure-pillar_1.0.538_Darwin_x86_64.tar.gz"
+    sha256 "1e0a74879253220fbcc79fbbf012fa45576caba6102f5dff988ccbec959fed28"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.534/generate-secure-pillar_1.0.534_Linux_x86_64.tar.gz"
-      sha256 "7f2f08c052d79cb163be85548a9518acfa0914f6c5b22f28a51aaf441b053de7"
+      url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.538/generate-secure-pillar_1.0.538_Linux_x86_64.tar.gz"
+      sha256 "1ec4861a3cd3b8024ae9a483f018c6cfd6a594946baaf0db3238cffe3952ace8"
     end
   end
   
