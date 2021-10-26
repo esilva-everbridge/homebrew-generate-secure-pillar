@@ -5,29 +5,27 @@
 class GenerateSecurePillar < Formula
   desc "Create and update encrypted content or decrypt encrypted content in YAML files"
   homepage "https://github.com/Everbridge/generate-secure-pillar"
-  version "1.0.574"
-  bottle :unneeded
+  version "1.0.592"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.574/generate-secure-pillar_1.0.574_Darwin_x86_64.tar.gz"
-    sha256 "d49e5b26d66b2210bc90bdbe91c3a4a852307b0834d87ada51aefc56ef0b3ef4"
+  on_macos do
+    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.592/generate-secure-pillar_1.0.592_Darwin_all.tar.gz"
+    sha256 "b2c44dd90b3a840bfe5c13065df7b71b621b2d4f817f2265bf475de99e5b919a"
+
+    def install
+      bin.install "generate-secure-pillar"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.574/generate-secure-pillar_1.0.574_Darwin_arm64.tar.gz"
-    sha256 "45d8743686e202960a254edf8bf2b046d70736142749286b41bc49a04ec014e6"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.574/generate-secure-pillar_1.0.574_Linux_x86_64.tar.gz"
-    sha256 "cea882db311cdf97ba19ec4e9b239cf1e41ba4f71ff39dfbeb4502401d406194"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.574/generate-secure-pillar_1.0.574_Linux_arm64.tar.gz"
-    sha256 "2eb12a3c26d006f5f37f00c1b3ef591583544d07cd867660f763d5d57fc97c5f"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.592/generate-secure-pillar_1.0.592_Linux_x86_64.tar.gz"
+      sha256 "b8ffe798735502021e6e13ed0deebb733fc3ced42b55d95690ad6795fcb63017"
+
+      def install
+        bin.install "generate-secure-pillar"
+      end
+    end
   end
 
   depends_on "gpg1"
-
-  def install
-    bin.install "generate-secure-pillar"
-  end
 end
