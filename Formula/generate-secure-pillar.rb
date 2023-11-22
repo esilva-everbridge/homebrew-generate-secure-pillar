@@ -5,13 +5,13 @@
 class GenerateSecurePillar < Formula
   desc "Create and update encrypted content or decrypt encrypted content in YAML files"
   homepage "https://github.com/Everbridge/generate-secure-pillar"
-  version "1.0.610"
+  version "1.0.620"
 
   depends_on "gpg1"
 
   on_macos do
-    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.610/generate-secure-pillar_1.0.610_darwin_all.tar.gz"
-    sha256 "e5e3e99d224c6cade3e9ad398707cf53bad3dffadb52c9f0f76bdd6ed3878f00"
+    url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.620/generate-secure-pillar_1.0.620_darwin_all.tar.gz"
+    sha256 "9c5dd5d2f223bb6123354969bc1deb3c83cffeb57787aef1608a9b598b8b00bb"
 
     def install
       bin.install "generate-secure-pillar"
@@ -20,8 +20,8 @@ class GenerateSecurePillar < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.610/generate-secure-pillar_1.0.610_linux_amd64.tar.gz"
-      sha256 "a6b32041e96d0a0ead59066581590e502e3dec13d2c8652ab148092b4053caad"
+      url "https://github.com/Everbridge/generate-secure-pillar/releases/download/v1.0.620/generate-secure-pillar_1.0.620_linux_amd64.tar.gz"
+      sha256 "0b3d20470bd2590fc0da7ea45eb3c7d203d783e732a7053651e6a27a2aef5524"
 
       def install
         bin.install "generate-secure-pillar"
